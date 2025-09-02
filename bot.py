@@ -1,16 +1,17 @@
+import os
 import logging
 import sqlite3
 import re
 import asyncio
 import random
-import os
 from telegram import Update
 from telegram.ext import Application, ContextTypes, MessageHandler, filters
 
-# ==================== تنظیمات شما ====================
-TOKEN = os.environ.get('BOT_TOKEN', '')  # ✅ ایمن
-SOURCE_CHANNEL = os.environ.get('SOURCE_CHANNEL', '@farhad78787878')
-DEST_CHANNEL = os.environ.get('DEST_CHANNEL', '@farhad1234567891011')
+# ==================== تنظیمات از متغیرهای محیطی ====================
+TOKEN = os.environ.get("TOKEN", "7881185873:AAGeoxxuDin6Hh2NaN97Dq3AfFjAKE5Zaes")
+SOURCE_CHANNEL = os.environ.get("SOURCE_CHANNEL", "@farhad78787878")
+DEST_CHANNEL = os.environ.get("DEST_CHANNEL", "@farhad1234567891011")
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "processed_messages.db")
 # =====================================================
 
 # ------ تنظیمات لاگ ------
